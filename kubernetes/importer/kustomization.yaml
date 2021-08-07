@@ -3,6 +3,6 @@ configMapGenerator:
       files:
         - ./volume/openhim/openhim-import.json
         - ./volume/openhim/openhimConfig.js
-  resources:
-    - ./core-openhim-config-importer-job.yaml
+resources:
+  - ./santedb-openhim-config-importer-job.yaml
   

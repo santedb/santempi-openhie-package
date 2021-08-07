@@ -3,12 +3,9 @@
 k8sMainRootFilePath=$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )
 
 if [ "$1" == "init" ]; then
-
-    # Create the namespace
     kubectl apply -f $k8sMainRootFilePath/santedb/db-deployment.yaml,$k8sMainRootFilePath/santedb/db-service.yaml,$k8sMainRootFilePath/santedb/santedb-deployment.yaml,$k8sMainRootFilePath/santedb/santedb-service.yaml,$k8sMainRootFilePath/santedb/santedb-mpi-app-persistentvolumeclaim.yaml,$k8sMainRootFilePath/santedb/santedb-mpi-config-persistentvolumeclaim.yaml,$k8sMainRootFilePath/santedb/santedb-mpi-seed-persistentvolumeclaim.yaml
     bash "$k8sMainRootFilePath"/../importer/k8s.sh up
 elif [ "$1" == "up" ]; then
-    # Create the namespace
     kubectl apply -f $k8sMainRootFilePath/santedb/db-deployment.yaml,$k8sMainRootFilePath/santedb/db-service.yaml,$k8sMainRootFilePath/santedb/santedb-deployment.yaml,$k8sMainRootFilePath/santedb/santedb-service.yaml,$k8sMainRootFilePath/santedb/santedb-mpi-app-persistentvolumeclaim.yaml,$k8sMainRootFilePath/santedb/santedb-mpi-config-persistentvolumeclaim.yaml,$k8sMainRootFilePath/santedb/santedb-mpi-seed-persistentvolumeclaim.yaml
     kubectl apply -k $k8sMainRootFilePath
 elif [ "$1" == "down" ]; then
