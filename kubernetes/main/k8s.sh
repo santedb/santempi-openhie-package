@@ -14,7 +14,7 @@ elif [ "$1" == "down" ]; then
 elif [ "$1" == "destroy" ]; then
     kubectl delete -k $k8sMainRootFilePath
     # bash "$k8sMainRootFilePath"/../importer/k8s.sh clean
-    kubectl delete service santedb
+    kubectl delete service santedb-service
     kubectl delete service sdb-postgres
     kubectl delete pvc -l santedb-mpi-app
     kubectl delete pvc -l santedb-mpi-config

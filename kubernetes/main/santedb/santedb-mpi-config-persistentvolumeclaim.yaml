@@ -3,7 +3,7 @@ kind: PersistentVolumeClaim
 metadata:
   creationTimestamp: null
   labels:
-    io.kompose.service: santedb-mpi-config
+    package: santedb-mpi-config
   name: santedb-mpi-config
 spec:
   accessModes:

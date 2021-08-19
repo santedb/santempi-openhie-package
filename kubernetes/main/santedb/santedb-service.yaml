@@ -2,16 +2,16 @@ apiVersion: v1
 kind: Service
 metadata:
   labels:
-    io.kompose.service: santedb
+    package: santedb
   name: santedb-service
 spec:
   type: LoadBalancer
   ports:
-    - name: "8080"
+    - name: "8083"
       port: 8083
       targetPort: 8080
     - name: "2100"
       port: 2100
       targetPort: 2100
   selector:
-    io.kompose.service: santedb
+    package: santedb

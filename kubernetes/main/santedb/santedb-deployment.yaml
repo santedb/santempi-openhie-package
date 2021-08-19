@@ -2,18 +2,18 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    io.kompose.service: santedb
-  name: santedb
+    package: santedb
+  name: santedb-mpi-deployment
 spec:
   replicas: 1
   selector:
     matchLabels:
-      io.kompose.service: santedb
+      package: santedb
   strategy: {}
   template:
     metadata:
       labels:
-        io.kompose.service: santedb
+        package: santedb
     spec:
       containers:
       - env:
