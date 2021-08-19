@@ -9,7 +9,7 @@ elif [ "$1" == "up" ]; then
     kubectl apply -f $k8sMainRootFilePath/santedb/db-deployment.yaml,$k8sMainRootFilePath/santedb/db-service.yaml,$k8sMainRootFilePath/santedb/santedb-deployment.yaml,$k8sMainRootFilePath/santedb/santedb-service.yaml,$k8sMainRootFilePath/santedb/santedb-mpi-app-persistentvolumeclaim.yaml,$k8sMainRootFilePath/santedb/santedb-mpi-config-persistentvolumeclaim.yaml,$k8sMainRootFilePath/santedb/santedb-mpi-seed-persistentvolumeclaim.yaml
     kubectl apply -k $k8sMainRootFilePath
 elif [ "$1" == "down" ]; then
-    kubectl delete deployment santedb
+    kubectl delete deployment santedb-mpi-deployment
     kubectl delete deployment sdb-postgres
 elif [ "$1" == "destroy" ]; then
     kubectl delete -k $k8sMainRootFilePath
