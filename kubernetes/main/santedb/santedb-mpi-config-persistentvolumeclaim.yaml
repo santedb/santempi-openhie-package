@@ -3,8 +3,8 @@ kind: PersistentVolumeClaim
 metadata:
   creationTimestamp: null
   labels:
-    io.kompose.service: santedb-mpi-app
-  name: santedb-mpi-app
+    package: santedb-mpi-config
+  name: santedb-mpi-config
 spec:
   accessModes:
   - ReadWriteOnce

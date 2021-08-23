@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    package: santedb
+  name: santedb-service
+spec:
+  type: LoadBalancer
+  ports:
+    - name: "8083"
+      port: 8083
+      targetPort: 8080
+    - name: "2100"
+      port: 2100
+      targetPort: 2100
+  selector:
+    package: santedb
